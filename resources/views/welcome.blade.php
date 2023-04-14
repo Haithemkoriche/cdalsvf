@@ -12,7 +12,7 @@
                     <p>C'est une maison de la science et de la connaissance gérée entièrement par l'Association des jeunes
                         scientifiques amateurs et encadrant un groupe de jeunes ambitieux.</p>
                     <div class="d-grid row-gap-3"><a href="" class="btn btn-primary p-2">Inscrir</a><a href=""
-                            class="btn btn-info p-2">Contacter</a>
+                            class="btn btn-light p-2">Contacter</a>
                     </div>
                 </div>
             </div>
@@ -23,7 +23,7 @@
                     <p>C'est une maison de la science et de la connaissance gérée entièrement par l'Association des jeunes
                         scientifiques amateurs et encadrant un groupe de jeunes ambitieux.</p>
                     <div class="d-grid row-gap-3"><a href="" class="btn btn-primary p-2">Inscrir</a><a href=""
-                            class="btn btn-info p-2">Contacter</a>
+                            class="btn btn-light p-2">Contacter</a>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                     <p>C'est une maison de la science et de la connaissance gérée entièrement par l'Association des jeunes
                         scientifiques amateurs et encadrant un groupe de jeunes ambitieux.</p>
                     <div class="d-grid row-gap-3"><a href="" class="btn btn-primary p-2">Inscrir</a><a href=""
-                            class="btn btn-info p-2">Contacter</a>
+                            class="btn btn-light p-2">Contacter</a>
                     </div>
                 </div>
             </div>
