@@ -14,7 +14,7 @@
 </head>
 
 <body style="scroll:smoth;">
-    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary"             >
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
         <div class="container">
             <a class="navbar-brand" href="#">C D A L S</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -24,22 +24,22 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto text-capitalize ">
                     <a class="nav-link p-lg-3 active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link p-lg-3 " href="#activités">activités</a>
-                    <a class="nav-link p-lg-3 " href="#ateliers">Les ateliers</a>
-                    <a class="nav-link p-lg-3 " href="#evenements">Événements</a>
-                    <a class="nav-link p-lg-3 " href="#about">À propos</a>
-                    <a class="nav-link p-lg-3 " href="#contact">Contact</a>
+                    <a class="nav-link p-lg-3 " href="/#activités">activités</a>
+                    <a class="nav-link p-lg-3 " href="/#ateliers">Les ateliers</a>
+                    <a class="nav-link p-lg-3 " href="/#evenements">Événements</a>
+                    <a class="nav-link p-lg-3 " href="/#about">À propos</a>
+                    <a class="nav-link p-lg-3 " href="/#contact">Contact</a>
                     <a class="nav-link p-lg-3 " href="/inscrir">inscrir</a>
                 </div>
             </div>
         </div>
     </nav>
 
-{{-- <div class="container"> --}}
+    {{-- <div class="container"> --}}
     {{-- <div class="mt-5 mb-5"> --}}
     @yield('content')
-{{-- </div> --}}
-{{-- </div> --}}
+    {{-- </div> --}}
+    {{-- </div> --}}
 
     <footer class="mt-5">
         <div class="container">

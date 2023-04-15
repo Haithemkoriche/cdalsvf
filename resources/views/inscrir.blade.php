@@ -8,7 +8,7 @@
                 partageant les mêmes centres d'intérêt dans notre centre de loisirs et scientifique. Inscrivez-vous dès
                 maintenant pour une vie plus enrichissante et passionnante !</p>
         </div>
-        <form action="{{Route('inscrir.store')}}" method="post">
+        <form action="{{ Route('inscrir.store') }}" method="post" class="needs-validation" novalidate>
             @csrf
             <div class="row mt-2 mb-2">
                 <div class="col-md-6">
@@ -21,7 +21,7 @@
                 </div>
             </div>
             <label for="email" class="form-label">Email :</label>
-            <input type="email" name="email" id="email" class="form-control">
+            <input type="email" name="email" id="email" class="form-control" required>
             <div class="row mt-2 mb-2">
                 <div class="col-md-6">
                     <label for="date-naissance" class="form-label">Date de Naissance : </label>
