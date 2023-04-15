@@ -209,18 +209,23 @@
     <section id="contact">
         <div class="container">
             <h2 style="text-align:center">Contact</h2>
-            <form action="contact.php" method="post">
+            <form action="{{ Route('contact.store') }}" method="post">
+                @csrf
                 <div class="form-group">
-                    <label for="name">Nom</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
+                    <label for="name" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="name" name="contact-name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Adresse email</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+                    <label for="email" class="form-label">Adresse email</label>
+                    <input type="email" class="form-control" id="email" name="contact-email" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    <label for="contact-phone" class="form-label">Numero telephone :</label>
+                    <input type="tel" name="contact-phone" id="contact-phone" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="contact-message" rows="5" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Envoyer</button>
             </form>

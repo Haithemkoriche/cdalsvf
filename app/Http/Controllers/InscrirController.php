@@ -31,4 +31,5 @@ class InscrirController extends Controller
         ]);
         return redirect('/');
     }
+    
 }

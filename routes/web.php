@@ -17,5 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/inscrir', [InscrirController::class ,'create']);
+Route::get('/inscrir', [InscrirController::class, 'create']);
 Route::post('/inscrir', [InscrirController::class, 'store'])->name('inscrir.store');
+Route::post('', [ContactController::class, 'store'])->name('contact.store');

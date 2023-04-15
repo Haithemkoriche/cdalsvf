@@ -16,8 +16,5 @@ class Student extends Model
         'telephone',
         'date_naissance',
         'lieu_naissance',
-
-
-
     ];
 }
