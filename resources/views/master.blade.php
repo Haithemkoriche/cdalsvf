@@ -29,18 +29,19 @@
                     <a class="nav-link p-lg-3 " href="#evenements">Événements</a>
                     <a class="nav-link p-lg-3 " href="#about">À propos</a>
                     <a class="nav-link p-lg-3 " href="#contact">Contact</a>
-                    <a class="nav-link p-lg-3 " href="#">inscrir</a>
+                    <a class="nav-link p-lg-3 " href="/inscrir">inscrir</a>
                 </div>
             </div>
         </div>
     </nav>
 
-
+{{-- <div class="container"> --}}
+    {{-- <div class="mt-5 mb-5"> --}}
     @yield('content')
+{{-- </div> --}}
+{{-- </div> --}}
 
-
-
-    <footer>
+    <footer class="mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
