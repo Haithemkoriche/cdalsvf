@@ -8,7 +8,7 @@
                 partageant les mêmes centres d'intérêt dans notre centre de loisirs et scientifique. Inscrivez-vous dès
                 maintenant pour une vie plus enrichissante et passionnante !</p>
         </div>
-        <form action="" method="post">
+        <form action="{{Route('inscrir.store')}}" method="post">
             @csrf
             <div class="row mt-2 mb-2">
                 <div class="col-md-6">
