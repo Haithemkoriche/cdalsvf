@@ -36,7 +36,7 @@
             <input type="tel" name="numero" id="numero" class="form-control">
             <label for="addres" class="form-label mt-2 mb-2">Votre Adresse :</label>
             <input type="text" class="form-control" id="addres" name="addres">
-            <div class="mt-5 mb-2 d-flex ">
+            <div class="mt-5 mb-2 me-5 d-flex justify-content-end ">
                 <input type="submit" value="S'inscrir" class="btn btn-primary p-3 pe-5 ps-5">
             </div>
         </form>
