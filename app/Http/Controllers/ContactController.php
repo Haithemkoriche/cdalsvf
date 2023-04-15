@@ -4,16 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\contact;
 use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
 
 class ContactController extends Controller
 {
-    public function store()
+    public function store(Request $request): RedirectResponse
     {
         $contact = new contact();
-        $contact->set('name', Request::getValue('contact-name'));
-        $contact->set('email', Request::getValue('contact-email'));
-        $contact->set('phone', Request::getValue('contact-phone'));
-        $contact->set('message', Request::getValue('contact-message'));
+        $contact->name = $request->contact-name;
+        $contact->email = $request->contact-email;
+        $contact->phone = $request->contact-phone;
+        $contact->message = $request->contact-message;
         $contact->save();
         return ('message evoyer avec succes');
     }

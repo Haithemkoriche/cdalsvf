@@ -8,12 +8,12 @@
                 partageant les mêmes centres d'intérêt dans notre centre de loisirs et scientifique. Inscrivez-vous dès
                 maintenant pour une vie plus enrichissante et passionnante !</p>
         </div>
-        <form action="{{ Route('inscrir.store') }}" method="post" class="needs-validation" novalidate>
+        <form action="{{ Route('inscrir.store') }}" method="post" class="row needs-validation" novalidate>
             @csrf
             <div class="row mt-2 mb-2">
                 <div class="col-md-6">
                     <label for="nom" class="form-label">Nom :</label>
-                    <input type="text" id="nom" name="nom" class="form-control">
+                    <input type="text" id="nom" name="nom" class="form-control" required>
                 </div>
                 <div class="col-md-6">
                     <label for="prenom" class="form-label">Prénom :</label>

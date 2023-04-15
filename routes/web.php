@@ -2,7 +2,10 @@
 
 use App\Http\Controllers\InscrirController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
+
+use App\Models\Activity;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,8 +18,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $activities = Activity::all();
+    return view('index', ['activities' => $activities]);
 });
 Route::get('/inscrir', [InscrirController::class, 'create']);
 Route::post('/inscrir', [InscrirController::class, 'store'])->name('inscrir.store');
-Route::post('', [ContactController::class, 'store'])->name('contact.store');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');

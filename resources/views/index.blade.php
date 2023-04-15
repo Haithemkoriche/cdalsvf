@@ -11,7 +11,7 @@
                     <h1>Centre de développement d'activités de divertissement scientifique</h1>
                     <p>C'est une maison de la science et de la connaissance gérée entièrement par l'Association des jeunes
                         scientifiques amateurs et encadrant un groupe de jeunes ambitieux.</p>
-                    <div class="d-grid row-gap-3"><a href="" class="btn btn-primary p-2">Inscrir</a><a href=""
+                    <div class="d-grid row-gap-3"><a href="/inscrir" class="btn btn-primary p-2">Inscrir</a><a href="#contact"
                             class="btn btn-light p-2">Contacter</a>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                     <h1>Centre de développement d'activités de divertissement scientifique</h1>
                     <p>C'est une maison de la science et de la connaissance gérée entièrement par l'Association des jeunes
                         scientifiques amateurs et encadrant un groupe de jeunes ambitieux.</p>
-                    <div class="d-grid row-gap-3"><a href="" class="btn btn-primary p-2">Inscrir</a><a href=""
+                    <div class="d-grid row-gap-3"><a href="/inscrir" class="btn btn-primary p-2">Inscrir</a><a href="#contact"
                             class="btn btn-light p-2">Contacter</a>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                     <h1>Centre de développement d'activités de divertissement scientifique</h1>
                     <p>C'est une maison de la science et de la connaissance gérée entièrement par l'Association des jeunes
                         scientifiques amateurs et encadrant un groupe de jeunes ambitieux.</p>
-                    <div class="d-grid row-gap-3"><a href="" class="btn btn-primary p-2">Inscrir</a><a href=""
+                    <div class="d-grid row-gap-3"><a href="/inscrir" class="btn btn-primary p-2">Inscrir</a><a href="#contact"
                             class="btn btn-light p-2">Contacter</a>
                     </div>
                 </div>
@@ -55,79 +55,19 @@
         <div class="container mb-6 mt-6 pt-5">
             <h2 style="text-align:center" class="mb-5 mt-5">Nos Activités </h2>
             <d class="mt-5 row column-gap-auto row-gap-5 ">
+                @foreach ($activities as $activity)
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
-                        <img src="{{ asset('images/c-4.jpg') }}" class="card-img-top" alt="...">
+                        <img src="images/{{ $activity->image }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Activité 1</h5>
-                            <p class="card-text">Some quick example text to build on the Activité 1 and make up the bulk of
-                                the
-                                card's content.</p>
+                            <h5 class="card-title">{{ $activity->title }}</h5>
+                            <p class="card-text">{{ $activity->description }}</p>
                             <a href="#" class="btn btn-primary">En savoir plus</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <img src="{{ asset('images/c-4.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Activité 1</h5>
-                            <p class="card-text">Some quick example text to build on the Activité 1 and make up the bulk of
-                                the
-                                card's content.</p>
-                            <a href="#" class="btn btn-primary">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <img src="{{ asset('images/c-4.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Activité 1</h5>
-                            <p class="card-text">Some quick example text to build on the Activité 1 and make up the bulk of
-                                the
-                                card's content.</p>
-                            <a href="#" class="btn btn-primary">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <img src="{{ asset('images/c-4.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Activité 1</h5>
-                            <p class="card-text">Some quick example text to build on the Activité 1 and make up the bulk of
-                                the
-                                card's content.</p>
-                            <a href="#" class="btn btn-primary">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <img src="{{ asset('images/c-4.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Activité 1</h5>
-                            <p class="card-text">Some quick example text to build on the Activité 1 and make up the bulk of
-                                the
-                                card's content.</p>
-                            <a href="#" class="btn btn-primary">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <img src="{{ asset('images/c-4.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Activité 1</h5>
-                            <p class="card-text">Some quick example text to build on the Activité 1 and make up the bulk of
-                                the
-                                card's content.</p>
-                            <a href="#" class="btn btn-primary">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-
+                @endforeach
+                
         </div>
     </section>
     <!-- end activities -->
@@ -209,7 +149,8 @@
     <section id="contact">
         <div class="container">
             <h2 style="text-align:center">Contact</h2>
-            <form action="{{ Route('contact.store') }}" method="post">
+            <form action="{{Route('contact.store')}}" method="POST">
+                {{-- @method('PUT') --}}
                 @csrf
                 <div class="form-group">
                     <label for="name" class="form-label">Nom</label>

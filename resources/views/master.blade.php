@@ -23,7 +23,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto text-capitalize ">
-                    <a class="nav-link p-lg-3 active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link p-lg-3 active" aria-current="page" href="/#">Home</a>
                     <a class="nav-link p-lg-3 " href="/#activités">activités</a>
                     <a class="nav-link p-lg-3 " href="/#ateliers">Les ateliers</a>
                     <a class="nav-link p-lg-3 " href="/#evenements">Événements</a>
