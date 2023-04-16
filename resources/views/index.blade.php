@@ -52,22 +52,21 @@
     </div>
     <!-- start activities -->
     <section id="activités">
-        <div class="container mb-6 mt-6 pt-5">
+        <div class="container mb-5 mt-5 pt-5">
             <h2 style="text-align:center" class="mb-5 mt-5">Nos Activités </h2>
             <div class="mt-5 row column-gap-auto row-gap-5 ">
                 @foreach ($activities as $activity)
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100">
                             <img src="images/{{ $activity->image }}" class="card-img-top img-fluid h-50" alt="...">
-                            <div class="card-body">
+                            <div class="card-body d-md-flex flex-column">
                                 <h5 class="card-title">{{ $activity->title }}</h5>
                                 <p class="card-text">{{ $activity->description }}</p>
-                                <a href="#" class="btn btn-primary">En savoir plus</a>
+                                <a href="#" class="btn btn-primary mt-auto">En savoir plus</a>
                             </div>
                         </div>
                     </div>
                 @endforeach
-
             </div>
     </section>
     <!-- end activities -->
