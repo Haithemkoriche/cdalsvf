@@ -11,8 +11,8 @@
                     <h1>Centre de développement d'activités de divertissement scientifique</h1>
                     <p>C'est une maison de la science et de la connaissance gérée entièrement par l'Association des jeunes
                         scientifiques amateurs et encadrant un groupe de jeunes ambitieux.</p>
-                    <div class="d-grid row-gap-3"><a href="/inscrir" class="btn btn-primary p-2">Inscrir</a><a href="#contact"
-                            class="btn btn-light p-2">Contacter</a>
+                    <div class="d-grid row-gap-3"><a href="/inscrir" class="btn btn-primary p-2">Inscrir</a><a
+                            href="#contact" class="btn btn-light p-2">Contacter</a>
                     </div>
                 </div>
             </div>
@@ -22,8 +22,8 @@
                     <h1>Centre de développement d'activités de divertissement scientifique</h1>
                     <p>C'est une maison de la science et de la connaissance gérée entièrement par l'Association des jeunes
                         scientifiques amateurs et encadrant un groupe de jeunes ambitieux.</p>
-                    <div class="d-grid row-gap-3"><a href="/inscrir" class="btn btn-primary p-2">Inscrir</a><a href="#contact"
-                            class="btn btn-light p-2">Contacter</a>
+                    <div class="d-grid row-gap-3"><a href="/inscrir" class="btn btn-primary p-2">Inscrir</a><a
+                            href="#contact" class="btn btn-light p-2">Contacter</a>
                     </div>
                 </div>
             </div>
@@ -33,8 +33,8 @@
                     <h1>Centre de développement d'activités de divertissement scientifique</h1>
                     <p>C'est une maison de la science et de la connaissance gérée entièrement par l'Association des jeunes
                         scientifiques amateurs et encadrant un groupe de jeunes ambitieux.</p>
-                    <div class="d-grid row-gap-3"><a href="/inscrir" class="btn btn-primary p-2">Inscrir</a><a href="#contact"
-                            class="btn btn-light p-2">Contacter</a>
+                    <div class="d-grid row-gap-3"><a href="/inscrir" class="btn btn-primary p-2">Inscrir</a><a
+                            href="#contact" class="btn btn-light p-2">Contacter</a>
                     </div>
                 </div>
             </div>
@@ -54,21 +54,21 @@
     <section id="activités">
         <div class="container mb-6 mt-6 pt-5">
             <h2 style="text-align:center" class="mb-5 mt-5">Nos Activités </h2>
-            <d class="mt-5 row column-gap-auto row-gap-5 ">
+            <div class="mt-5 row column-gap-auto row-gap-5 ">
                 @foreach ($activities as $activity)
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <img src="images/{{ $activity->image }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $activity->title }}</h5>
-                            <p class="card-text">{{ $activity->description }}</p>
-                            <a href="#" class="btn btn-primary">En savoir plus</a>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <img src="images/{{ $activity->image }}" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $activity->title }}</h5>
+                                <p class="card-text">{{ $activity->description }}</p>
+                                <a href="#" class="btn btn-primary">En savoir plus</a>
+                            </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
-                
-        </div>
+
+            </div>
     </section>
     <!-- end activities -->
     <!-- start ateliers -->
@@ -149,24 +149,24 @@
     <section id="contact">
         <div class="container">
             <h2 style="text-align:center">Contact</h2>
-            <form action="{{Route('contact.store')}}" method="POST">
+            <form action="{{ Route('contact.store') }}" method="POST">
                 {{-- @method('PUT') --}}
                 @csrf
                 <div class="form-group">
                     <label for="name" class="form-label">Nom</label>
-                    <input type="text" class="form-control" id="name" name="contact-name" required>
+                    <input type="text" class="form-control" id="name" name="contact_name" required>
                 </div>
                 <div class="form-group">
                     <label for="email" class="form-label">Adresse email</label>
-                    <input type="email" class="form-control" id="email" name="contact-email" required>
+                    <input type="email" class="form-control" id="email" name="contact_email" required>
                 </div>
                 <div class="form-group">
                     <label for="contact-phone" class="form-label">Numero telephone :</label>
-                    <input type="tel" name="contact-phone" id="contact-phone" class="form-control">
+                    <input type="tel" name="contact_phone" id="contact-phone" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" name="contact-message" rows="5" required></textarea>
+                    <textarea class="form-control" id="message" name="contact_message" rows="5" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Envoyer</button>
             </form>

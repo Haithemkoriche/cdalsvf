@@ -3,9 +3,8 @@
 use App\Http\Controllers\InscrirController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\IndexController;
 
-
-use App\Models\Activity;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,10 +16,7 @@ use App\Models\Activity;
 |
 */
 
-Route::get('/', function () {
-    $activities = Activity::all();
-    return view('index', ['activities' => $activities]);
-});
+Route::get('/', [IndexController::class, 'index']);
 Route::get('/inscrir', [InscrirController::class, 'create']);
 Route::post('/inscrir', [InscrirController::class, 'store'])->name('inscrir.store');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
