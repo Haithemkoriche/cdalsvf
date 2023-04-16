@@ -57,8 +57,8 @@
             <div class="mt-5 row column-gap-auto row-gap-5 ">
                 @foreach ($activities as $activity)
                     <div class="col-lg-4 col-md-6">
-                        <div class="card">
-                            <img src="images/{{ $activity->image }}" class="card-img-top img-fluid" alt="...">
+                        <div class="card h-100">
+                            <img src="images/{{ $activity->image }}" class="card-img-top img-fluid h-50" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $activity->title }}</h5>
                                 <p class="card-text">{{ $activity->description }}</p>
