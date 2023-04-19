@@ -32,17 +32,13 @@
                     <a class="nav-link p-lg-3 " href="/#ateliers">Les ateliers</a>
                     <a class="nav-link p-lg-3 " href="/#evenements">Événements</a>
                     <a class="nav-link p-lg-3 " href="/#contact">Contact</a>
-                    <a class="nav-link p-lg-3 " href="/inscrir">inscrire</a>
+                    <a class=" p-lg-3 btn btn-primary text-white" href="/inscrir">inscrire</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    {{-- <div class="container"> --}}
-    {{-- <div class="mt-5 mb-5"> --}}
     @yield('content')
-    {{-- </div> --}}
-    {{-- </div> --}}
 
     <footer class="mt-5 pb-4">
         <div class="container">
