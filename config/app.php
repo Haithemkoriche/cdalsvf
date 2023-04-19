@@ -213,3 +213,4 @@ return [
     ])->toArray(),
 
 ];
+$app->register(\Barryvdh\DomPDF\ServiceProvider::class);

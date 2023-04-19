@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+        integrity="sha512-yDUXOUWwbHH4ggxueDnC5vJv4tmfySpVdIcN1LksGZi8W8EVZv4uKGrQc0pVf66zS7LDhFJM7Zdeow1sw1/8Jw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <title>@yield('titel')</title>
 </head>
@@ -23,13 +26,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto text-capitalize ">
-                    <a class="nav-link p-lg-3 active" aria-current="page" href="/#">Home</a>
+                    <a class="nav-link p-lg-3 active text-primary" aria-current="page" href="/#">Acceuil</a>
+                    <a class="nav-link p-lg-3 " href="/#about">À propos</a>
                     <a class="nav-link p-lg-3 " href="/#activités">activités</a>
                     <a class="nav-link p-lg-3 " href="/#ateliers">Les ateliers</a>
                     <a class="nav-link p-lg-3 " href="/#evenements">Événements</a>
-                    <a class="nav-link p-lg-3 " href="/#about">À propos</a>
                     <a class="nav-link p-lg-3 " href="/#contact">Contact</a>
-                    <a class="nav-link p-lg-3 " href="/inscrir">inscrir</a>
+                    <a class="nav-link p-lg-3 " href="/inscrir">inscrire</a>
                 </div>
             </div>
         </div>
@@ -41,7 +44,7 @@
     {{-- </div> --}}
     {{-- </div> --}}
 
-    <footer class="mt-5">
+    <footer class="mt-5 pb-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -55,10 +58,10 @@
                 <div class="col-md-4">
                     <h3>Suivez-nous</h3>
                     <ul class="social-media">
-                        <li><a href="#"><i class="fa-solid fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa-solid fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa-solid fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa-solid fa-linkedin"></i></a></li>
+                        <i class="fa-brands fa-facebook"></i>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -73,12 +76,19 @@
                     </form>
                 </div>
             </div>
+            <h3 class="mt-2 mb-2">Localisation : </h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12792.419703364221!2d2.9482025!3d36.7200412!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128faf8850f2ce0d%3A0xe04e843394305899!2sCenter%20Development%20Activities%20Scientists%20Ouledfayt%20Cdals!5e0!3m2!1sen!2sdz!4v1681857433561!5m2!1sen!2sdz"
+                class="w-100" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            {{-- </div> --}}
         </div>
-        <div class="bottom-footer">
+        <div class="bottom-footer mt-4 mb-2">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <p>&copy; 2023 Centre de développement de loisirs et scientifiques. Tous droits réservés.</p>
+                        <p class="mb-0 text-center">&copy; 2023 Centre de développement de loisirs et scientifiques.
+                            Tous droits réservés.</p>
                     </div>
                 </div>
             </div>

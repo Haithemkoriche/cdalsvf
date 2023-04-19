@@ -50,6 +50,27 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    <!-- about -->
+    <section id="about">
+        <div class="container">
+            <h2 style="text-align:center">À propos</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{{ asset('images/rouina.jpg') }}" class="rounded mx-auto d-block img-fluid" alt=""
+                    srcset="">
+                </div>
+                <div class="col-md-6 m-md-auto mt-4">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero at auctor congue, enim
+                        tellus
+                        venenatis magna, in venenatis lectus tellus eu sapien. Proin quis neque rutrum, lobortis felis eu,
+                        vestibulum nibh. Nullam interdum sem ac nunc sodales, nec finibus justo sagittis.</p>
+                    <a href="about.html" class="btn btn-primary">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end about -->
     <!-- start activities -->
     <section id="activités">
         <div class="container mb-5 mt-5 pt-5">
@@ -75,6 +96,7 @@
         <div class="container mb-5 mt-5">
             <h2 style="text-align:center" class="mb-5 mt-5">Les ateliers proposés</h2>
             <div class="row column-gap-auto">
+                {{-- @foreach ($ateliers as $atelier) --}}
                 <div class="col-lg-4 col-md-6">
                     <div class="atelier">
                         <img src="{{ asset('images/c-2.jpg') }}" alt="Atelier 1">
@@ -83,22 +105,7 @@
                         <a href="#" class="btn btn-primary">S'inscrire</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="atelier">
-                        <img src="{{ asset('images/c-2.jpg') }}" alt="Atelier 2">
-                        <h3>Atelier 2</h3>
-                        <p>Description de l'atelier 2</p>
-                        <a href="#" class="btn btn-primary">S'inscrire</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="atelier">
-                        <img src="{{ asset('images/c-2.jpg') }}" alt="Atelier 3">
-                        <h3>Atelier 3</h3>
-                        <p>Description de l'atelier 3</p>
-                        <a href="#" class="btn btn-primary">S'inscrire</a>
-                    </div>
-                </div>
+                {{-- @endforeach --}}
             </div>
         </div>
     </section>
@@ -109,41 +116,19 @@
         <div class="container">
             <h2 style="text-align:center" class="pt-5">Événements à venir</h2>
             <div class="evenements-liste">
+                {{-- @foreach ($evenements as $evenement) --}}
                 <div class="evenement">
                     <img src="{{ asset('images/c-2.jpg') }}" alt="Événement 1">
                     <h3>Titre de l'événement 1</h3>
                     <p>Date et heure de l'événement 1</p>
                 </div>
-                <div class="evenement">
-                    <img src="{{ asset('images/c-2.jpg') }}" alt="Événement 2">
-                    <h3>Titre de l'événement 2</h3>
-                    <p>Date et heure de l'événement 2</p>
-                </div>
-                <div class="evenement">
-                    <img src="{{ asset('images/c-2.jpg') }}" alt="Événement 3">
-                    <h3>Titre de l'événement 3</h3>
-                    <p>Date et heure de l'événement 3</p>
-                </div>
+                {{-- @endforeach --}}
             </div>
             <a href="evenements.html" class="btn"><u>Voir tous les événements</u></a>
         </div>
     </section>
 
     <!-- end evenement -->
-    <!-- about -->
-    <section id="about">
-        <div class="container">
-            <h2 style="text-align:center">À propos</h2>
-            <img src="{{ asset('images/rouina.jpg') }}" class="rounded mx-auto d-block img-fluid" alt=""
-                srcset="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero at auctor congue, enim tellus
-                venenatis magna, in venenatis lectus tellus eu sapien. Proin quis neque rutrum, lobortis felis eu,
-                vestibulum nibh. Nullam interdum sem ac nunc sodales, nec finibus justo sagittis.</p>
-            <a href="about.html" class="btn btn-primary">En savoir plus</a>
-        </div>
-    </section>
-
-    <!-- end about -->
     <!-- contact -->
     <section id="contact">
         <div class="container">
