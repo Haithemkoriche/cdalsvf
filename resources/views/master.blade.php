@@ -32,7 +32,7 @@
                     <a class="nav-link p-lg-3 " href="/#ateliers">Les ateliers</a>
                     <a class="nav-link p-lg-3 " href="/#evenements">Événements</a>
                     <a class="nav-link p-lg-3 " href="/#contact">Contact</a>
-                    <a class=" p-lg-3 btn btn-primary text-white" href="/inscrir">inscrire</a>
+                    <a class="p-lg-3 btn btn-primary text-white" href="/inscrir">inscrire</a>
                 </div>
             </div>
         </div>
