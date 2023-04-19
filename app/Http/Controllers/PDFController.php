@@ -42,6 +42,5 @@ class PDFController extends Controller
 
         // Générer le PDF et le renvoyer en réponse
         return $pdf->download('inscription.pdf');
-        return redirect('/index');
     }
 }
