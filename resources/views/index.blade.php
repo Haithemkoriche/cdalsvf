@@ -5,39 +5,19 @@
 @section('content')
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active " data-bs-interval="3000">
-                <img src="{{ asset('images/1.jpg') }}" class="d-block w-100 blur carousel-img" alt="...">
-                <div class="carousel-caption">
-                    <h1>Centre de développement d'activités de divertissement scientifique</h1>
-                    <p>C'est une maison de la science et de la connaissance gérée entièrement par l'Association des jeunes
-                        scientifiques amateurs et encadrant un groupe de jeunes ambitieux.</p>
-                    <div class="d-grid row-gap-3"><a href="/inscrir" class="btn btn-primary p-2">Inscrir</a><a
-                            href="#contact" class="btn btn-light p-2">Contacter</a>
+            @foreach ($slides as $key => $slide)
+                <div class="carousel-item {{ $key == 0 ? 'active' : '' }}" data-bs-interval="3000">
+                    <img src="images/slide/{{ $slide->image }}" class="d-block w-100 blur carousel-img" alt="...">
+                    <div class="carousel-caption">
+                        <h1>{{ $slide->title }}</h1>
+                        <p>{{ $slide->description }}</p>
+                        <div class="d-grid row-gap-3">
+                            <a href="/inscrir" class="btn btn-primary p-2">Inscrir</a>
+                            <a href="#contact" class="btn btn-light p-2">Contacter</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-                <img src="{{ asset('images/c-2.jpg') }}" class="d-block w-100 blur carousel-img" alt="...">
-                <div class="carousel-caption">
-                    <h1>Centre de développement d'activités de divertissement scientifique</h1>
-                    <p>C'est une maison de la science et de la connaissance gérée entièrement par l'Association des jeunes
-                        scientifiques amateurs et encadrant un groupe de jeunes ambitieux.</p>
-                    <div class="d-grid row-gap-3"><a href="/inscrir" class="btn btn-primary p-2">Inscrir</a><a
-                            href="#contact" class="btn btn-light p-2">Contacter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-                <img src="{{ asset('images/c-3.jpg') }}" class="d-block w-100 blur carousel-img" alt="...">
-                <div class="carousel-caption">
-                    <h1>Centre de développement d'activités de divertissement scientifique</h1>
-                    <p>C'est une maison de la science et de la connaissance gérée entièrement par l'Association des jeunes
-                        scientifiques amateurs et encadrant un groupe de jeunes ambitieux.</p>
-                    <div class="d-grid row-gap-3"><a href="/inscrir" class="btn btn-primary p-2">Inscrir</a><a
-                            href="#contact" class="btn btn-light p-2">Contacter</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
             data-bs-slide="prev">
@@ -50,6 +30,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+
     <!-- about -->
     <section id="about">
         <div class="container">
@@ -57,7 +38,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <img src="{{ asset('images/rouina.jpg') }}" class="rounded mx-auto d-block img-fluid" alt=""
-                    srcset="">
+                        srcset="">
                 </div>
                 <div class="col-md-6 m-md-auto mt-4">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero at auctor congue, enim
