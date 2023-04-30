@@ -3,6 +3,10 @@
 
 <head>
     <title>Laravel - ItSolutionStuff.com</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('fonts/css/all.css') }}">
     <style type="text/css">
@@ -67,16 +71,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">Login</a>
                         </li>
-                        <li class="nav-item">
-                            {{-- <a class="nav-link" href="{{ route('register') }}">Register</a> --}}
-                        </li>
-                    {{-- @else --}}
+                    @else
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('logout') }}">Logout</a>
                         </li>
                     @endguest
                 </ul>
-
             </div>
         </div>
     </nav>

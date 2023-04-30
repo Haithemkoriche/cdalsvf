@@ -14,6 +14,7 @@ class LoginController extends Controller
     public function index()
     {
         return view('admin.dashboard');
+
     }
 
     public function login(Request $request)
@@ -25,7 +26,7 @@ class LoginController extends Controller
 
         if (Auth::guard('admin')->attempt($credentials)) {
             $request->session()->regenerate();
-            return view('admin.dashboard');
+            return redirect('/admin');
         }
 
         return back()->withErrors([
@@ -35,7 +36,7 @@ class LoginController extends Controller
     public function dashboard()
     {
         if (Auth::check()) {
-            return view('admin.dashboard');
+            return redirect('/admin');
         }
 
         return redirect("login")->withSuccess('Opps! You do not have access');
