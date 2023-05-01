@@ -6,7 +6,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\LoginController;
-use App\Http\Middleware\admin;
+// use App\Http\Middleware\admin;
 
 
 /*
