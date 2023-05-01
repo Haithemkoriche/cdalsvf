@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Storage;
 
 class AtelierController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view('admin.add_atelier');
     }
     public function ajouter(Request $request)
@@ -33,6 +34,6 @@ class AtelierController extends Controller
         $atelier->save();
 
         // Rediriger vers une page ou afficher un message de succès
-        return redirect()->back()->with('success', 'Atelier ajouté avec succès.');
+        return redirect("/admin");
     }
 }

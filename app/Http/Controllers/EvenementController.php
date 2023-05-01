@@ -31,6 +31,6 @@ class EvenementController extends Controller
         $evenement->save();
 
         // Rediriger vers une page ou afficher un message de succès
-        return redirect()->back()->with('success', 'Événement ajouté avec succès.');
+        return redirect("/admin");
     }
 }

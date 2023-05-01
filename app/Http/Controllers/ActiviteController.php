@@ -32,7 +32,7 @@ class ActiviteController extends Controller
         $activite->save();
 
         // Rediriger vers une page ou afficher un message de succès
-        return redirect()->back()->with('success', 'Activité ajoutée avec succès.');
+        return redirect("/admin");
     }
 
 }
