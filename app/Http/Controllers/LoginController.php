@@ -8,13 +8,23 @@ use Illuminate\Http\Request;
 // use Illuminate\Foundation\Auth\User;
 use App\Models\admin;
 use App\Models\User;
+use App\Models\Activity;
+use App\Models\Student;
+use App\Models\carousel;
+
 
 class LoginController extends Controller
 {
     public function index()
     {
-        return view('admin.dashboard');
+        $memberCount = student::count();
+        // $employeeCount = Employee::count();
+        $activityCount = Activity::count();
+        // $workshopCount = Workshop::count();
+        // $eventCount = Event::count();
+        $carouselItems = Carousel::all();
 
+        return view('admin.dashboard', compact('memberCount', 'activityCount', 'carouselItems'));
     }
 
     public function login(Request $request)
