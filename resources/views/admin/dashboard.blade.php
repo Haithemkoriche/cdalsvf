@@ -3,7 +3,7 @@
 @section('content')
     <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
         <div class="container">
-            <a class="navbar-brand" href="#">Laravel</a>
+            <a class="navbar-brand" href="#">CDALS</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,7 @@
             <div class="col-md-3">
                 <div class="card bg-primary text-white">
                     <div class="card-body">
-                        <h5 class="card-title">Membres</h5>
+                        <h5 class="card-title"> <i class="fas fa-users"></i>  Membres</h5>
                         <h2 class="card-text">{{ $membersCount }}</h2>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
             <div class="col-md-3">
                 <div class="card bg-success text-white">
                     <div class="card-body">
-                        <h5 class="card-title">Employés</h5>
+                        <h5 class="card-title"><i class="fas fa-users"></i>  Employés</h5>
                         <h2 class="card-text">400</h2>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
             <div class="col-md-3">
                 <div class="card bg-info text-white">
                     <div class="card-body">
-                        <h5 class="card-title">Activités</h5>
+                        <h5 class="card-title"><i class="fas fa-list"></i>  Activités</h5>
                         <h2 class="card-text">{{ $activitiesCount }}</h2>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
             <div class="col-md-3">
                 <div class="card bg-warning text-dark">
                     <div class="card-body">
-                        <h5 class="card-title">Ateliers</h5>
+                        <h5 class="card-title"><i class="fas fa-tools"></i>  Ateliers</h5>
                         <h2 class="card-text">{{ $ateliersCount }}</h2>
                     </div>
                 </div>

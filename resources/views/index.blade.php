@@ -12,7 +12,7 @@
                         <h1>{{ $slide->title }}</h1>
                         <p>{{ $slide->description }}</p>
                         <div class="d-grid row-gap-3">
-                            <a href="/inscrir" class="btn btn-primary p-2">Inscrir</a>
+                            <a href="/inscrir" class="btn btn-primary p-2">Inscrire</a>
                             <a href="#contact" class="btn btn-light p-2">Contacter</a>
                         </div>
                     </div>
