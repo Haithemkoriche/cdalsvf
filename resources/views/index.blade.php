@@ -60,7 +60,7 @@
                 @foreach ($activities as $activity)
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100">
-                            <img src="{{ $activity->image }}" class="card-img-top img-fluid h-50" alt="...">
+                            <img src="{{ Storage::url($activity->image) }}" class="card-img-top img-fluid h-50" alt="...">
                             <div class="card-body d-md-flex flex-column">
                                 <h5 class="card-title">{{ $activity->title }}</h5>
                                 <p class="card-text">{{ $activity->description }}</p>
@@ -80,9 +80,9 @@
                 @foreach ($ateliers as $atelier)
                 <div class="col-lg-4 col-md-6">
                     <div class="atelier">
-                        <img src="{{ asset('images/c-2.jpg') }}" alt="Atelier 1">
-                        <h3>Atelier 1</h3>
-                        <p>Description de l'atelier 1</p>
+                        <img src="{{ Storage::url($atelier->image) }}" alt="Atelier 1">
+                        <h3>{{ $atelier->title }}</h3>
+                        <p>{{ $atelier->description }}</p>
                         <a href="#" class="btn btn-primary">S'inscrire</a>
                     </div>
                 </div>
@@ -99,9 +99,9 @@
             <div class="evenements-liste">
                 @foreach ($evenements as $evenement)
                 <div class="evenement">
-                    <img src="{{ asset('images/c-2.jpg') }}" alt="Événement 1">
-                    <h3>Titre de l'événement 1</h3>
-                    <p>Date et heure de l'événement 1</p>
+                    <img src="{{ Storage::url($evenement->image) }}" alt="Événement 1">
+                    <h3>{{ $evenement->title }}</h3>
+                    <p>{{ $evenement->description }}</p>
                 </div>
                 @endforeach
             </div>

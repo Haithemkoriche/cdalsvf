@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Activity;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class ActiviteController extends Controller
 {
@@ -17,7 +19,7 @@ class ActiviteController extends Controller
         ]);
 
         // Enregistrer l'image dans un dossier
-        $imagePath = $request->file('image')->store('public/images');
+            $imagePath = $request->file('image')->store('public/images');
 
         // Créer une nouvelle activité
         $activite = new Activity();

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Atelier;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class AtelierController extends Controller
 {
