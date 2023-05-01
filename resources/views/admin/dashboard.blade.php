@@ -36,7 +36,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Employés</h5>
-                        <h2 class="card-text">{{ $employeesCount }}</h2>
+                        {{-- <h2 class="card-text">{{ $employeesCount }}</h2> --}}
                     </div>
                 </div>
             </div>

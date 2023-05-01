@@ -11,20 +11,21 @@ use App\Models\User;
 use App\Models\Activity;
 use App\Models\Student;
 use App\Models\carousel;
-
+use App\Models\Atelier;
+use App\Models\Evenement;
 
 class LoginController extends Controller
 {
     public function index()
     {
-        $memberCount = student::count();
+        $membersCount = student::count();
         // $employeeCount = Employee::count();
-        $activityCount = Activity::count();
-        // $workshopCount = Workshop::count();
-        // $eventCount = Event::count();
+        $activitiesCount = Activity::count();
+        $ateliersCount = Atelier::count();
+        $evenementsCount = Evenement::count();
         $carouselItems = Carousel::all();
 
-        return view('admin.dashboard', compact('memberCount', 'activityCount', 'carouselItems'));
+        return view('admin.dashboard', compact('membersCount', 'activitiesCount', 'carouselItems','ateliersCount','evenementsCount'));
     }
 
     public function login(Request $request)

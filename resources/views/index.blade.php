@@ -60,7 +60,7 @@
                 @foreach ($activities as $activity)
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100">
-                            <img src="images/{{ $activity->image }}" class="card-img-top img-fluid h-50" alt="...">
+                            <img src="{{ $activity->image }}" class="card-img-top img-fluid h-50" alt="...">
                             <div class="card-body d-md-flex flex-column">
                                 <h5 class="card-title">{{ $activity->title }}</h5>
                                 <p class="card-text">{{ $activity->description }}</p>
@@ -77,7 +77,7 @@
         <div class="container mb-5 mt-5">
             <h2 style="text-align:center" class="mb-5 mt-5">Les ateliers proposés</h2>
             <div class="row column-gap-auto">
-                {{-- @foreach ($ateliers as $atelier) --}}
+                @foreach ($ateliers as $atelier)
                 <div class="col-lg-4 col-md-6">
                     <div class="atelier">
                         <img src="{{ asset('images/c-2.jpg') }}" alt="Atelier 1">
@@ -86,7 +86,7 @@
                         <a href="#" class="btn btn-primary">S'inscrire</a>
                     </div>
                 </div>
-                {{-- @endforeach --}}
+                @endforeach
             </div>
         </div>
     </section>
@@ -97,13 +97,13 @@
         <div class="container">
             <h2 style="text-align:center" class="pt-5">Événements à venir</h2>
             <div class="evenements-liste">
-                {{-- @foreach ($evenements as $evenement) --}}
+                @foreach ($evenements as $evenement)
                 <div class="evenement">
                     <img src="{{ asset('images/c-2.jpg') }}" alt="Événement 1">
                     <h3>Titre de l'événement 1</h3>
                     <p>Date et heure de l'événement 1</p>
                 </div>
-                {{-- @endforeach --}}
+                @endforeach
             </div>
             <a href="evenements.html" class="btn"><u>Voir tous les événements</u></a>
         </div>
