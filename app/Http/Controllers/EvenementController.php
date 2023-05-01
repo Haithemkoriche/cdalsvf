@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 
 class EvenementController extends Controller
 {
+    public function index(){
+        return view('admin.add_event');
+    }
     public function ajouter(Request $request)
     {
         // Valider les données du formulaire

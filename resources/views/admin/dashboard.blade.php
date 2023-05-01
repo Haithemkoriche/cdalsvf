@@ -22,10 +22,10 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-md-3">
-                <div class="card">
+                <div class="card bg-primary text-white">
                     <div class="card-body">
                         <h5 class="card-title">Membres</h5>
                         <h2 class="card-text">{{ $membersCount }}</h2>
@@ -33,15 +33,15 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card">
+                <div class="card bg-success text-white">
                     <div class="card-body">
                         <h5 class="card-title">Employés</h5>
-                        {{-- <h2 class="card-text">{{ $employeesCount }}</h2> --}}
+                        <h2 class="card-text">400</h2>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card">
+                <div class="card bg-info text-white">
                     <div class="card-body">
                         <h5 class="card-title">Activités</h5>
                         <h2 class="card-text">{{ $activitiesCount }}</h2>
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card">
+                <div class="card bg-warning text-dark">
                     <div class="card-body">
                         <h5 class="card-title">Ateliers</h5>
                         <h2 class="card-text">{{ $ateliersCount }}</h2>
@@ -61,73 +61,28 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Événements</h5>
+                        <h5 class="card-title"> <i class="fas fa-calendar-alt"></i>Événements</h5>
                         <h2 class="card-text">{{ $evenementsCount }}</h2>
                     </div>
                 </div>
             </div>
-            <!-- Ajouter une activité -->
             <div class="col-md-6">
-                <h2>Ajouter une activité</h2>
-                <form action="{{ route('ajouter_activite') }}" method="POST" enctype="multipart/form-data">
-                    @csrf
-                    <div class="form-group">
-                        <label for="title">Titre :</label>
-                        <input type="text" class="form-control" id="title" name="title" required>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-cogs"></i> Options
+                        </h5>
+                        <a href="{{ route('activite.index') }}" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Ajouter une activité
+                        </a>
+                        <a href="{{ route('atelier.index') }}" class="btn btn-success">
+                            <i class="fas fa-plus"></i> Ajouter un atelier
+                        </a>
+                        <a href="{{ route('evenement.index') }}" class="btn btn-info">
+                            <i class="fas fa-plus"></i> Ajouter un événement
+                        </a>
                     </div>
-                    <div class="form-group">
-                        <label for="description">Description :</label>
-                        <textarea class="form-control" id="description" name="description" rows="5" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="image">Image :</label>
-                        <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Ajouter</button>
-                </form>
+                </div>
             </div>
-
-            <!-- Ajouter un atelier -->
-            <div class="col-md-6">
-                <h2>Ajouter un atelier</h2>
-                <form action="{{ route('ajouter_atelier') }}" method="POST" enctype="multipart/form-data">
-                    @csrf
-                    <div class="form-group">
-                        <label for="atelier_title">Titre :</label>
-                        <input type="text" class="form-control" id="atelier_title" name="atelier_title" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="atelier_description">Description :</label>
-                        <textarea class="form-control" id="atelier_description" name="atelier_description" rows="5" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="atelier_image">Image :</label>
-                        <input type="file" class="form-control" id="atelier_image" name="atelier_image" accept="image/*"
-                            required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Ajouter</button>
-                </form>
-            </div>
-
-            <!-- Ajouter un événement -->
-            <div class="col-md-6">
-                <h2>Ajouter un événement</h2>
-                <form action="{{ route('ajouter_evenement') }}" method="POST" enctype="multipart/form-data">
-                    @csrf
-                    <div class="form-group">
-                        <label for="evenement_title">Titre :</label>
-                        <input type="text" class="form-control" id="evenement_title" name="evenement_title" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="evenement_description">Description :</label>
-                        <textarea class="form-control" id="evenement_description" name="evenement_description" rows="5" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="evenement_image">Image :</label>
-                        <input type="file" class="form-control" id="evenement_image" name="evenement_image"
-                            accept="image/*" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Ajouter</button>
-                </form>
-            </div>
-        @endsection
+        </div>
+    @endsection

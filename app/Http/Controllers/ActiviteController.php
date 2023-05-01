@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Storage;
 
 class ActiviteController extends Controller
 {
+    public function index(){
+        return view('admin.add_activité');
+    }
     public function ajouter(Request $request)
     {
         // Valider les données du formulaire
@@ -31,4 +34,5 @@ class ActiviteController extends Controller
         // Rediriger vers une page ou afficher un message de succès
         return redirect()->back()->with('success', 'Activité ajoutée avec succès.');
     }
+
 }

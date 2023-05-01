@@ -39,9 +39,12 @@ Route::group(['middleware' => ['admin']], function () {
 
 // Route pour l'ajout d'une activité
 Route::post('/ajouter_activite', [ActiviteController::class, 'ajouter'])->name('ajouter_activite');
+Route::get('/ajouter_activite', [ActiviteController::class, 'index'])->name('activite.index');
 
 // Route pour l'ajout d'un atelier
 Route::post('/ajouter_atelier', [AtelierController::class, 'ajouter'])->name('ajouter_atelier');
+Route::get('/ajouter_atelier', [AtelierController::class, 'index'])->name('atelier.index');
 
 // Route pour l'ajout d'un événement
 Route::post('/ajouter_evenement', [EvenementController::class, 'ajouter'])->name('ajouter_evenement');
+Route::get('/ajouter_evenement', [EvenementController::class, 'index'])->name('evenement.index');

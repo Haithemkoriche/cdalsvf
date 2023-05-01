@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Storage;
 
 class AtelierController extends Controller
 {
+    public function index(){
+        return view('admin.add_atelier');
+    }
     public function ajouter(Request $request)
     {
         // Valider les données du formulaire
