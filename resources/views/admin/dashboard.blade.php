@@ -3,7 +3,7 @@
 @section('content')
     <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
         <div class="container">
-            <a class="navbar-brand" href="#">CDALS</a>
+            <a class="navbar-brand" href="#">C D A L S</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,7 +28,7 @@
                 <div class="card bg-primary text-white">
                     <div class="card-body">
                         <h5 class="card-title"> <i class="fas fa-users"></i>  Membres</h5>
-                        <h2 class="card-text">{{ $membersCount }}</h2>
+                        <h2 class="card-text d-flex justify-content-between"> {{ $membersCount }} <a href="" class="text-white "><i class="fas fa-arrow-right"></i></a></h2>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                 <div class="card bg-success text-white">
                     <div class="card-body">
                         <h5 class="card-title"><i class="fas fa-users"></i>  Employés</h5>
-                        <h2 class="card-text">400</h2>
+                        <h2 class="card-text d-flex justify-content-between">400 <a href="" class="text-white "><i class="fas fa-arrow-right"></i></a></h2>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                 <div class="card bg-info text-white">
                     <div class="card-body">
                         <h5 class="card-title"><i class="fas fa-list"></i>  Activités</h5>
-                        <h2 class="card-text">{{ $activitiesCount }}</h2>
+                        <h2 class="card-text d-flex justify-content-between">{{ $activitiesCount }} <a href="" class="text-white "><i class="fas fa-arrow-right"></i></a></h2>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                 <div class="card bg-warning text-dark">
                     <div class="card-body">
                         <h5 class="card-title"><i class="fas fa-tools"></i>  Ateliers</h5>
-                        <h2 class="card-text">{{ $ateliersCount }}</h2>
+                        <h2 class="card-text d-flex justify-content-between">{{ $ateliersCount }} <a href="" class="text-white "><i class="fas fa-arrow-right"></i></a></h2>
                     </div>
                 </div>
             </div>
@@ -85,4 +85,10 @@
                 </div>
             </div>
         </div>
+        {{-- <div class="dashboard-card">
+            <h3>Carousel</h3>
+            <p>Ajouter un élément</p>
+            <a href="{{ route('carousel.create') }}" class="btn btn-primary">Ajouter au carousel</a>
+        </div> --}}
+
     @endsection
